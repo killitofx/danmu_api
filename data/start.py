@@ -4,7 +4,15 @@ from flask import request
 from flask_cors import CORS
 from m_w_test_danmu import *
 app = Flask(__name__)
- 
+
+
+@app.after_request
+def cors(environ):
+    environ.headers['Access-Control-Allow-Origin']='*'
+    environ.headers['Access-Control-Allow-Method']='*'
+    environ.headers['Access-Control-Allow-Headers']='x-requested-with,content-type'
+    return environ
+
 @app.route('/danmu/bilibili', methods=['GET', 'POST'])
 def bilibili_danmu():
 # 获取弹幕

@@ -10,7 +10,7 @@
 
 3. 创建容器  
 windows下  
-`docker run -v d:\WorkSpace\danmuapi\data\:/root/project -d -p 5000:5000 danmuapi`
+`docker run -v d:\WorkSpace\danmuapi\data\:/root/project -d -p 5000:5000 danmuapi`  
 linux下  
 `docker run -v /root/danmu_api/data:/root/project -d -p 5000:5000 danmuapi`  
 
